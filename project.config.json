@@ -1,21 +1,36 @@
 {
-	"client": "client/",
-	"svr": "server/",
-	"miniprogramRoot": "client/",
-	"qcloudRoot": "server/",
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
 	"setting": {
 		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
+		"preloadBackgroundData": false,
 		"minified": true,
 		"newFeature": true,
+		"coverView": true,
 		"autoAudits": false,
-		"uglifyFileName": true
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
 	},
-	"appid": "wx1241f41b037fec7c",
-	"projectname": "ideamerry_Intelligent_Repair_System",
 	"compileType": "miniprogram",
-	"libVersion": "2.4.0",
+	"libVersion": "2.10.4",
+	"appid": "wx1241f41b037fec7c",
+	"projectname": "wx",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
 	"condition": {
@@ -27,81 +42,13 @@
 			"current": -1,
 			"list": []
 		},
-		"plugin": {
-			"current": -1,
-			"list": []
-		},
 		"game": {
+			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": 9,
-			"list": [
-				{
-					"id": 0,
-					"name": "测试",
-					"pathName": "pages/listenClassInfo/listenClassInfo",
-					"query": "",
-					"scene": "1078"
-				},
-				{
-					"id": -1,
-					"name": "听课",
-					"pathName": "pages/addListenClassInfo/addListenClassInfo",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "听课详细",
-					"pathName": "pages/listenClassInfoDetail/listenClassInfoDetail",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "评价",
-					"pathName": "pages/addListenClassInfoEvaluate/addListenClassInfoEvaluate",
-					"query": ""
-				},
-				{
-					"id": 4,
-					"name": "请假",
-					"pathName": "pages/leave/leave",
-					"query": ""
-				},
-				{
-					"id": 5,
-					"name": "报修列表",
-					"pathName": "pages/repair/repair",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "认证",
-					"pathName": "pages/userAuth/index",
-					"query": "",
-					"scene": "1078"
-				},
-				{
-					"id": -1,
-					"name": "添加报修",
-					"pathName": "pages/addRepair/addRepair",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "添加报修",
-					"pathName": "pages/recorderManager/index",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "添加报修",
-					"pathName": "pages/repairDetail/index",
-					"scene": null
-				}
-			]
+			"current": -1,
+			"list": []
 		}
 	}
 }

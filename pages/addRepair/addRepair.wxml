@@ -1,0 +1,70 @@
+<!--pages/addRepair/addRepair.wxml-->
+<i-alert type="warning" class="{{hideAlert?'hideAlert':'showAlert'}}" show-icon>
+	{{message}}
+</i-alert>
+<view class="sel-input">
+	<view class="item-flex">
+		<text>申请人:</text>
+		<input value="{{ applicantName }}" title="申请人" bindinput='getApplicantName' type="text" placeholder="输入申请人姓名" />
+	</view>
+	<view class="item-flex">
+		<text>联系电话:</text>
+		<input value="{{ mobile }}" title="联系电话" bindinput='getMobile' type="number" placeholder="输入联系电话" />
+	</view>
+	<view class="item-flex">
+		<text>故障地点:</text>
+		<input value="{{ address }}" title="故障地点" bindinput='getAddress' type="text" placeholder="输入故障地点" />
+	</view>
+</view>
+<view class="m-item">
+	<view>问题描述:<text class="tip-text">(必填) </text></view>
+</view>
+<view>
+	<textarea class="item-ta" value="{{ description }}" bindinput='getDescription' type="text" placeholder="输入问题描述"> </textarea>
+</view>
+<view class="m-item">
+	<view>问题图片:<text class="tip-text"> </text></view>
+</view>
+<view class="section">
+	<view class='img'>
+	</view>
+	<view class="weui-cell" style='position:inherit'>
+		<view class="weui-cell__bd">
+			<view class="weui-uploader">
+
+				<view class="weui-uploader__bd" style='margin-right:0px;'>
+					<view class="weui-uploader__files weui-uploader__video_view {{uVideoHideView==true?'view_show':'view_hide'}}" id="uploaderFiles">
+						<video class="weui-uploader__video " src='{{videoUrlShow}}' controls>
+						</video>
+					</view>
+					<view class="weui-uploader__files" id="uploaderFiles">
+						<block wx:for="{{src}}" wx:for-index="index" wx:key="unique">
+							<image class="weui-uploader__image" bindlongpress="deleteImage" src='{{item}}' data-index='{{index}}'>
+							</image>
+						</block>
+					</view>
+					<view class="addView-border" bindtap='addImage'>
+						<image class="addView" src='../images/camera.png'></image>
+					</view>
+					<view class="addView-border" bindtap='addVideo' class="addView-border {{uVideohide==true?'view_show':'view_hide'}}">
+						<image class="addView" src='../images/video.png'></image>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+
+<i-panel title="无标题输入框">
+	<picker bindchange="bindTypePickerChange" value="{{index}}" range="{{types}}" range-key="name">
+		<view class="picker">
+			<i-input value="{{typeName}}" class="picker" title="受理部门" placeholder="选择受理部门" disabled />
+		</view>
+	</picker>
+</i-panel>
+<i-panel title="无标题输入框">
+	<i-input value="{{ remarks }}" title="备注" bindchange='getRemarks' type="text" placeholder="如有特殊需求请注明" />
+</i-panel>
+
+<i-button bind:click="handleClick" disabled='{{disabled}}' loading="{{loading}}" type="success">提交</i-button>
+<i-toast id="toast" />

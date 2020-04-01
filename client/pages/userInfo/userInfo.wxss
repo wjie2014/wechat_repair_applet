@@ -1,5 +1,0 @@
-/* pages/userInfo/userInfo.wxss */
-.button-color{
-  background-color: #19be6b;
-  color: white;
-}

@@ -1,0 +1,155 @@
+/* pages/addRepair/addRepair.wxss */
+
+.hideAlert {
+  display: none;
+}
+
+.showAlert {
+  display: block;
+}
+
+.item-flex {
+  display: flex;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  font-size: 28rpx;
+  border-bottom: 1px solid #dedede;
+}
+
+.item-flex input{
+  font-size: 28rpx;
+  padding-left: 20rpx;
+}
+
+.item-flex text{
+  font-size: 28rpx;
+  width: 140rpx;
+  text-align: left;
+}
+.sel-input{
+  padding-right: 3%;
+  padding-left: 3%;
+}
+
+.m-item {
+  background: white;
+  display: flex;
+  padding: 3%;
+  font-size: 28rpx;
+
+  /* height: 50rpx; */
+  color: #444;
+}
+
+.m-item text {
+  line-height: 50rpx;
+  margin-right: 30rpx;
+}
+.tip-text{
+  color: tomato;
+}
+
+.item-ta{
+  width: 90%;margin-left:3%;margin-right:3%;height:160rpx;border:1px solid #dedede;border-radius:10rpx;padding:2%;
+  font-size: 28rpx;
+}
+
+/* pages/addCircle/index.wxss */
+
+.view_hide {
+  display: none;
+}
+
+.view_show {
+  display: block;
+}
+
+.section {
+  padding: 15rpx;
+  background-color: white;
+  padding-bottom: 4px;
+}
+
+page {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.weui-uploader__video {
+  /* width: 120px;
+  height: 80px; */
+  width: 80%;
+  height: 120px;
+  margin-bottom: 4px;
+}
+
+.weui-uploader__video_view {
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 100%;
+}
+
+.submitView {
+  position: fixed;
+  bottom: 0rpx;
+  width: 100%;
+}
+
+.bt {
+  border-radius: 0rpx;
+}
+
+.addView {
+  width: 47px;
+  height: 47px;
+  padding: 15px;
+}
+
+.addView-border {
+  float: left;
+  position: relative;
+  margin-right: 9px;
+  margin-bottom: 9px;
+  width: 77px;
+  height: 77px;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+}
+
+.section-image {
+  margin-top: 20rpx;
+}
+
+.img {
+  margin-top: 20rpx;
+}
+
+.weui-uploader__image {
+  float: left;
+  position: relative;
+  margin-right: 9px;
+  margin-bottom: 9px;
+  width: 77px;
+  height: 77px;
+  border: 0px solid #d9d9d9;
+}
+
+.m-grid-item {
+  padding: 10px 10px;
+  position: relative;
+  float: left;
+  text-align: center;
+  width: 33.3333333%;
+  box-sizing: border-box;
+  border-right: 1rpx solid #e9eaec;
+  border-bottom: 1rpx solid #e9eaec;
+}
+.grid{
+  background-color:white;
+padding:0px 15px;
+}

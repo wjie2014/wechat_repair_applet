@@ -1,0 +1,4 @@
+<!--pages/auth/auth.wxml-->
+<view class='title'>温馨提示</view>
+<view class='info'>为保证您的正常使用，请进行授权！</view>
+<button class="bt" open-type="getUserInfo" bindgetuserinfo="getUserInfo">开始使用</button>
