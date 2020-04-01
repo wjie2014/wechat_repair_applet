@@ -137,13 +137,13 @@ Page({
   },
    handleChange: function (e) {
     wx.navigateTo({
-      url: '../addRepair/addRepair',
+      url: '../add_repair/add_repair',
     })
   },
   goDetail:function(e){
     var repair = JSON.stringify(e.currentTarget.dataset.repair);
     wx.navigateTo({
-      url: '../repairDetail/index?repair=' + repair,
+      url: '../repair_detail/index?repair=' + repair,
     })
   }
 })

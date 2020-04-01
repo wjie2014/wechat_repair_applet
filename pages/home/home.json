@@ -5,7 +5,6 @@
     "i-card": "../../iView/dist/card/index",
     "i-cell-group": "../../iView/dist/cell-group/index",
     "i-cell": "../../iView/dist/cell/index",
-    "van-card": "../../jView/card/index",
     "i-toast": "../../iView/dist/toast/index",
     "i-spin": "../../iView/dist/spin/index"
   }

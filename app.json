@@ -3,10 +3,10 @@
     "pages/home/home",
     "pages/index/index",
     "pages/auth/auth",
-    "pages/addRepair/addRepair",
+    "pages/add_repair/add_repair",
     "pages/repair/repair",
     "pages/bingding/index",
-    "pages/repairDetail/index"
+    "pages/repair_detail/index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#2196F3",
@@ -23,20 +23,20 @@
       {
         "pagePath": "pages/home/home",
         "text": "首页",
-        "iconPath": "pages/images/new_back.png",
-        "selectedIconPath": "pages/images/new_front.png"
+        "iconPath": "images/new_back.png",
+        "selectedIconPath": "images/new_front.png"
       },
       {
         "pagePath": "pages/repair/repair",
         "text": "报修",
-        "iconPath": "pages/images/repair_back.png",
-        "selectedIconPath": "pages/images/repair_front.png"
+        "iconPath": "images/repair_back.png",
+        "selectedIconPath": "images/repair_front.png"
       },
       {
         "pagePath": "pages/index/index",
         "text": "我的",
-        "iconPath": "pages/images/me_back.png",
-        "selectedIconPath": "pages/images/me_front.png"
+        "iconPath": "images/me_back.png",
+        "selectedIconPath": "images/me_front.png"
       }
     ]
   },
