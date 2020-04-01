@@ -1,0 +1,122 @@
+/* pages/studentBinding/index.wxss */
+.title{
+  text-align: center;
+  margin-top: 10px;
+}
+.bangdingForm {
+    margin: 10px 10px;
+    background: #fff;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+}
+.bangdingTab {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+}
+.bangdingBox {
+    margin: -1px;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px 5px 0 0;
+    border-bottom: none;
+    text-align: center;
+}
+
+
+.bangdingTab .changeTab {
+    width: 50%;
+    height: 50px;
+    line-height: 50px;
+    position: absolute;
+    top: -1px;
+    z-index: 1;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    color: #959595;
+}
+.activeTab {
+    z-index: 2;
+    border: 1px solid #d0d0d0;
+    border-bottom: none;
+    background: #fff;
+    color: #333333 !important;
+}
+.leftPosition {
+    left: -1px;
+}
+.bangdingTab .changeTab {
+    width: 50%;
+    height: 50px;
+    line-height: 50px;
+    position: absolute;
+    top: -1px;
+    z-index: 1;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    color: #959595;
+}
+
+.rightPosition {
+    right: -1px;
+}
+.bangdingBox .headerBox {
+    display: inline-block;
+    margin-top: 40px;
+    overflow: hidden;
+}
+.bangdingBox .headerBox .leftHeader {
+    width: 80px;
+    float: left;
+}
+.bangdingBox .headerBox .linkImg{
+  width: 30px;
+    float: left;
+    padding: 30px 20px;
+}
+.bangdingBox .headerBox .linkImg image {
+    height:20px;
+float:left;
+width:30px;
+
+}
+.bangdingBox .headerBox .leftHeader .userinfo-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.bangdingBox .headerBox .leftHeader {
+    width: 80px;
+    float: left;
+}
+.bangdingBox .headerBox view {
+    display: block;
+    width: 100%;
+    line-height: 20px;
+    font-size: 14px;
+}
+
+.bangdingBox .headerBox .rightHeader {
+    width: 80px;
+    float: left;
+}
+.defualt-head{
+ width: 80px;
+    height: 80px;
+    float: left;
+    border-radius: 50%;
+}
+.bangdingBox .headerBox .rightHeader image {
+    width: 80px;
+    height: 80px;
+    float: left;
+    border-radius: 50%;
+}
+.hide{
+  display: none;
+}
+.show{
+  display:inline;
+}

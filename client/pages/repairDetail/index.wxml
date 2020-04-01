@@ -1,0 +1,62 @@
+<!--pages/repairDetail/index.wxml-->
+<view class='card-top'>
+  <view class="post-container" bindtap="goDetail">
+			<i-card title="申请人：{{repair.applicantName}}" extra="">
+				<view slot="content">联系电话：{{repair.mobile == null ? '' : repair.mobile}}</view>
+				<view slot="content">故障地点：{{repair.address == null ? '' :repair.address}}</view>
+				<view slot="content">问题描述：{{repair.description == null ? '' :repair.description}}</view>
+        <view slot="content">报修备注：{{repair.remarks == null ? '' :repair.remarks}}</view>
+
+				<view slot="footer">报修时间：{{repair.repairDate}}</view>
+			</i-card>
+  </view>
+
+  <view wx:if="{{imageArr.length > 0}}" style='margin-left:16px;background-color:white;margin-right:16px;'>
+    <view class="thumbnails" style='padding:10px;'>
+      <block wx:for="{{imageArr}}" wx:key="unique">
+        <view  wx:if="{{imageArr.length==1}}">
+          <image style="width:100%" mode="aspectFit" src="{{url}}{{item}}" catchtap="imageShow" data-id="{{index}}"></image>
+        </view>
+        <view class="thumbnail" wx:if="{{imageArr.length>1}}">
+          <image style="width:80px;height:80px;padding:2px;" mode="aspectFill" src="{{url}}{{item}}" catchtap="imageShow" data-id="{{index}}"></image>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view wx:if="{{repair.radioUrl!=''}}" style='margin-left:16px;margin-right:16px;margin-top:5px;background-color:white'>
+    <i-grid class='grid'>
+      <view bindtap="play" class="m-grid-item">{{buttonText}}</view>
+      <view bindtap="stop" class="m-grid-item">停止播放</view>
+    </i-grid>
+  </view>
+  <view style="margin-top:4px;">
+    <i-card title="请对李四的工作作出评价 " extra="" wx:if="{{hideEvaluate==false&&repair.star==0&&repair.status==4&&userInfo.type==0}}">
+      <view slot="content">
+        <i-rate bind:change="onChange2" value="{{starIndex1}}">
+        </i-rate>
+      </view>
+      <view slot="content">如您对我们的工作有什么意见和建议，请留言:</view>
+      <i-panel slot="content" title="无标题输入框">
+        <i-input value="{{ repair.evaluate }}" bindchange='getEvaluate' type="textarea" placeholder="请留下您宝贵的建议和意见" />
+      </i-panel>
+    </i-card>
+  </view>
+  <view style='margin:0px 7px' wx:if="{{hideEvaluate==false&&repair.star==0&&repair.status==4&&userInfo.type==0}}">
+    <i-button bind:click="evaluateClick" type="success">提交</i-button>
+  </view>
+  <view style='margin:0px 16px' wx:if="{{repair.status!=4&&userInfo.type==2}}">
+    <i-panel title="无标题输入框">
+
+      <picker bindchange="bindTypePickerChange" value="{{index}}" range="{{users}}" range-key="nickName">
+        <view class="picker">
+          <i-input value="{{nickName}}" class="picker" title="分配给" placeholder="选择维修员" disabled />
+        </view>
+      </picker>
+    </i-panel>
+  </view>
+
+  <i-button wx:if="{{repair.status==1&&userInfo.type==2}}" bind:click="handleClick" type="success">分配任务</i-button>
+  <i-button wx:if="{{repair.status==2&&userInfo.type==2}}" bind:click="handleClick" type="success">换人</i-button>
+  <i-button wx:if="{{repair.status==2&&userInfo.type==1&&startRepairShow}}" bind:click="updateRepairStatus" data-status='3' type="success">开始维修</i-button>
+  <i-button wx:if="{{(repair.status==3||repair.status==2)&&userInfo.type==1&&finishRepairShow}}" data-status='4' bind:click="updateRepairStatus" type="success">完成维修</i-button>
+</view>

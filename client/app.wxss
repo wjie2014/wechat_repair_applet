@@ -1,0 +1,13 @@
+/**app.wxss**/
+@import "/wxParse/wxParse.wxss";
+@import 'weui.wxss';
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+} 
+.button-color{
+  background-color: #2196F3;
+  color: white;
+}

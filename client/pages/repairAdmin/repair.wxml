@@ -1,0 +1,30 @@
+<!--pages/repair/repair.wxml-->
+<view class='card-top'>
+  <block wx:for="{{repairList}}" wx:key="unique">
+    <view class="post-container" bindtap="goDetail" data-repair='{{item}}'>
+      <!-- <i-tag class="i-tags tag" wx:if="{{item.status==1}}" name="单个标签"  color="yellow"> {{item.statusName}}</i-tag>
+   <i-tag class="i-tags tag" wx:if="{{item.status==2}}" name="单个标签"  color="blue"> {{item.statusName}}</i-tag>
+   <i-tag class="i-tags tag" wx:if="{{item.status==3}}" name="单个标签"  color="green"> {{item.statusName}}</i-tag> -->
+      <!-- <i-card title="{{item.applicantName}} [{{item.typeName}}]"  extra="{{item.repairDate}}" > -->
+      <i-card title="报修人：{{item.applicantName}} {{item.mobile == null ? '' : item.mobile}} " extra="">
+        <view slot="content">描 述：{{item.description == null ? '' :item.description}}</view>
+         <view slot="content">地 点：{{item.address == null ? '' :item.address}}</view>
+        <view class="i-tags tag" slot="content" wx:if="{{item.status==1}}" name="单个标签" color="yellow"> 进 度：{{item.statusName}}</view>
+        <view class="i-tags tag" slot="content" wx:if="{{item.status==2}}" name="单个标签" color="blue">进 度： {{item.statusName}}</view>
+        <view class="i-tags tag" slot="content" wx:if="{{item.status==3}}" name="单个标签" color="green"> 进 度：{{item.statusName}}</view>
+        <view class="i-tags tag" slot="content" wx:if="{{item.status==4}}" name="单个标签" color="green"> 进 度：{{item.statusName}}</view>
+        <view slot="content" wx:if="{{item.status!=1}}">维修人：{{item.nickName?item.nickName:''}}  {{item.repairMobile?item.repairMobile:''}}</view>
+        <view slot="content" wx:if="{{item.star!=0&&item.status==4}}">评价：
+          <i-rate bind:change="onChange1" value="{{item.star}}">
+          </i-rate>
+        </view>
+        <!-- <view slot="content" wx:if="{{item.star==0&&item.status==4}}">点击进行评价
+        </view> -->
+        <view slot="footer">报修时间：{{item.repairDate}}</view>
+      </i-card>
+    </view>
+  </block>
+  <view class='loadMore' wx:if="{{hasNextPage==false}}">
+    {{loadMoreText}}
+  </view>
+</view>

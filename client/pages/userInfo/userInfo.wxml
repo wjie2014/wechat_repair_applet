@@ -1,0 +1,29 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <form bindsubmit='submit'>
+
+    <view class="page__bd">
+      <view class="weui-cells__title"></view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">电话</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" value='{{mobile}}' name="mobile" placeholder="请输入电话号码" />
+          </view>
+        </view>
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">邮箱</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" value='{{email}}' name="email" placeholder="请输入电子邮箱" />
+          </view>
+        </view>
+        </view>
+        <view class="weui-btn-area">
+          <button class="weui-btn button-color" form-type='submit'>保存</button>
+        </view>
+      </view>
+  </form>
+  </view>

@@ -1,0 +1,135 @@
+/* pages/repair/repair.wxss */
+page {
+  background-color: whitesmoke;
+}
+.tag-status{
+  padding-bottom: 6px;
+}
+.post-container {
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  padding: 10rpx 0rpx;
+  /* margin-top: 5px; */
+}
+.item-card{
+  margin-top: 6px;
+}
+
+.post-author-date {
+  margin: 10rpx 0 20rpx 10rpx;
+}
+
+.post-author {
+  width: 60rpx;
+  height: 60rpx;
+  vertical-align: middle;
+}
+
+.post-date {
+  margin-left: 20rpx;
+  vertical-align: middle;
+  margin-bottom: 5px;
+  font-size: 26rpx;
+}
+
+.post-title-back {
+  font-weight: 500;
+  color: green;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+.green{
+  color: #4CAF50;
+}
+.post-title-front {
+  font-weight: 500;
+  color: red;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.post-image {
+  width: 100%;
+  height: 340rpx;
+  margin: auto 0;
+  margin-bottom: 15px;
+}
+
+.post-content {
+  color: #555;
+  font-size: 32rpx;
+  margin-bottom: 16rpx;
+  margin-top: 16rpx;
+  line-height: 40rpx;
+  text-indent: 2em;
+  text-align: left;
+}
+
+.post-address {
+  color: #555;
+  font-size: 32rpx;
+  margin-bottom: 16rpx;
+  line-height: 40rpx;
+  text-align: left;
+}
+
+.post-customer {
+  color: #555;
+  font-size: 32rpx;
+  margin-bottom: 16rpx;
+  line-height: 40rpx;
+  text-align: left;
+}
+
+.post-like {
+  font-size: 32rpx;
+  flex-direction: row;
+  line-height: 16px;
+}
+
+.post-like-image {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.post-like-font {
+  color: #2196f3;
+}
+
+.post-like-font-right {
+  margin-right: 10rpx;
+  color: #2196f3;
+  float: left;
+  padding-top: 4px;
+  padding-bottom:6px; 
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.loadMore{
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 4px;
+}
+
+.circle-float{
+  color: #ffffff;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 20rpx;
+  right: 20rpx;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  font-size: 40rpx;
+  background: #2196F3;
+ box-shadow:1px 7px 10px rgba(0, 0, 0, .4);
+
+}

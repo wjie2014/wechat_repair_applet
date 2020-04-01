@@ -1,0 +1,13 @@
+{
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 40,
+  "usingComponents": {
+    "i-tab-bar": "../../iView/dist/tab-bar/index",
+    "i-tab-bar-item": "../../iView/dist/tab-bar-item/index",
+    "i-cell-group": "../../iView/dist/cell-group/index",
+    "i-cell": "../../iView/dist/cell/index",
+    "i-card": "../../iView/dist/card/index",
+    "i-tag": "../../iView/dist/tag/index",
+    "i-rate": "../../iView/dist/rate/index"
+  }
+}

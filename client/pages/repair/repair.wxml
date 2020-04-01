@@ -1,0 +1,18 @@
+<!--pages/repair/repair.wxml-->
+<view class='card-top'>
+	<block wx:for="{{repairList}}" wx:key="unique">
+		<view class="post-container" bindtap="goDetail" data-repair='{{item}}'>
+			<i-card title="申请人：{{item.applicantName}}" extra="">
+				<view slot="content">联系电话：{{item.mobile == null ? '' : item.mobile}}</view>
+				<view slot="content">故障地点：{{item.address == null ? '' :item.address}}</view>
+				<view slot="content">问题描述：{{item.description == null ? '' :item.description}}</view>
+				<view slot="footer">报修时间：{{item.repairDate}}</view>
+			</i-card>
+		</view>
+	</block>
+	<view class='loadMore' wx:if="{{hasNextPage==false}}">
+		{{loadMoreText}}
+	</view>
+</view>
+
+<text bindtap="handleChange" class='circle-float'>+</text>
