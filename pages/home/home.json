@@ -1,5 +1,6 @@
 {
   "enablePullDownRefresh": true,
+  "navigationBarTitleText": "首页",
   "onReachBottomDistance": 40,
   "usingComponents": {
     "i-card": "../../iView/dist/card/index",
