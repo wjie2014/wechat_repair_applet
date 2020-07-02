@@ -74,7 +74,19 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    var that = this;
+    var that = this
+    //判断用户是否绑定，若未绑定则自动跳转到用户身份认证页面，若已经绑定，则可以使用所有功能
+
+    var userInfo = app.globalData.userInfo 
+    if(userInfo&&userInfo.isBindingMobile==1){
+      console.log("已经身份认证，可以正常使用")
+    }else{
+      console.log("跳转到身份认证页面进行认证")
+      wx.navigateTo({
+        url: '/pages/binding/index',
+      })
+    }
+
     wx.getStorage({
       key: 'refreshRepair',
       success: function (res) {
@@ -112,7 +124,6 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    console.log("下拉刷新")
     this.setData({
       page: 1
     })

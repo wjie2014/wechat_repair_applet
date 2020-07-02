@@ -26,7 +26,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.10.4",
 	"appid": "wx1241f41b037fec7c",
-	"projectname": "wx",
+	"projectname": "repair_share",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
@@ -42,13 +42,28 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
-		"miniprogram": {
+		"gamePlugin": {
 			"current": -1,
 			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/binding/index",
+					"pathName": "pages/binding/index",
+					"scene": null
+				}
+			]
 		}
 	}
 }

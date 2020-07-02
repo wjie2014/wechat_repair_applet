@@ -301,7 +301,7 @@ Page({
   },
   auth:function(){
     wx.navigateTo({ //保留当前页面，跳转到应用内的某个页面（最多打开5个页面，之后按钮就没有响应的）
-      url: "/pages/bingding/index?openid=" + app.globalData.openid + "&unionid=" + app.globalData.unionid
+      url: "/pages/binding/index?openid=" + app.globalData.openid + "&unionid=" + app.globalData.unionid
     })
   },
   goList1:function(){

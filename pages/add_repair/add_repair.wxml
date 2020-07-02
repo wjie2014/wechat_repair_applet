@@ -31,7 +31,6 @@
 	<view class="weui-cell" style='position:inherit'>
 		<view class="weui-cell__bd">
 			<view class="weui-uploader">
-
 				<view class="weui-uploader__bd" style='margin-right:0px;'>
 					<view class="weui-uploader__files weui-uploader__video_view {{uVideoHideView==true?'view_show':'view_hide'}}" id="uploaderFiles">
 						<video class="weui-uploader__video " src='{{videoUrlShow}}' controls>

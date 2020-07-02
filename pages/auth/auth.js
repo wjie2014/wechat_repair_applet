@@ -50,7 +50,6 @@ Page({
   onPullDownRefresh: function () {
   
   },
-
   /**
    * 页面上拉触底事件的处理函数
    */
@@ -64,15 +63,8 @@ Page({
   onShareAppMessage: function () {
   
   },
-
   getUserInfo: function (e) {
-    var that = this;
-    //更新到数据库
     app.globalData.userInfo = e.detail.userInfo;
-    console.log(e.detail.userInfo);
-    console.log(app.globalData.userInfo);
-    //获取用户资料
-    var that = this;
     wx.request({
       url: app.serverUrl + 'api/v1/wx/saveUserInfo',
       data: {
@@ -84,21 +76,18 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
-        console.log("==========" + res.data);
-        wx.setStorage({
-          key: "refreshHome",
-          data: "1"
-        });
-        wx.setStorage({
-          key: "refreshCircleList",
-          data: "1"
-        });
-        //最后，记得返回刚才的页面
-        wx.navigateBack({
-          delta: 1
-        })
+        if(res.status==200){
+          wx.navigateBack({
+            delta: 1
+          })
+        }else{
+          wx.showToast({
+            title: '授权失败，请重试',
+            icon: 'none',
+            duration: 2000
+          })
+        }
       }
     });
-  
   }
 })

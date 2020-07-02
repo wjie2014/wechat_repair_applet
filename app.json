@@ -5,8 +5,8 @@
     "pages/auth/auth",
     "pages/add_repair/add_repair",
     "pages/repair/repair",
-    "pages/bingding/index",
-    "pages/repair_detail/index"
+    "pages/repair_detail/index",
+    "pages/binding/index"
   ],
   "window": {
     "navigationBarBackgroundColor": "#2196F3",
@@ -27,7 +27,7 @@
         "selectedIconPath": "images/new_front.png"
       },
       {
-        "pagePath": "pages/repair/repair",
+        "pagePath": "pages/add_repair/add_repair",
         "text": "报修",
         "iconPath": "images/repair_back.png",
         "selectedIconPath": "images/repair_front.png"

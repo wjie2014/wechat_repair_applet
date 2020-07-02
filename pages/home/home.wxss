@@ -1,8 +1,46 @@
-.form {
-  margin: 5%;
-  width: 90%;
-  color: black;
+/* 页面背景颜色为 #f2f2f2 */
+page{
+  background: #f2f2f2;
 }
-.item{
-  margin-top: 40rpx;
+/* 设置导航外层样式，绝对定位设置为fixed。z-index: 999999; 能够将 nav 布局层级结果放在最上层，避免被下层view遮挡*/
+.nav {
+  position: fixed; 
+  background: white;
+  color: #353535;
+  z-index: 999999;
+  max-height: 94rpx;
+  width: 100%;
+}
+/* 设置为水平布局，文字居中显示 */
+.flex {
+  display: flex;
+  text-align: center;
+}
+/* 设置选中项的底部边框 */
+.nav .nav-item.current {
+  border-bottom: 4rpx solid;
+}
+/* 设置选中项的文字颜色和大小 */
+.text-selected {
+  color: #2196F3;
+  font-size: 34rpx;
+}
+/* 设置各项的高度、边距，同时设置flex=1，表示各项平分 */
+.nav .nav-item {
+  height: 90rpx;
+  display: inline-block;
+  line-height: 90rpx;
+  margin: 0 10rpx;
+  padding: 0 20rpx;
+  flex: 1;
+}
+
+
+
+.card-top{
+  padding-top: 120rpx;
+}
+
+.item-container{
+  margin-bottom: 20rpx;
 }

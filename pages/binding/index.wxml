@@ -1,0 +1,12 @@
+<!--pages/binding/index.wxml-->
+<view class='binding-item'>
+	<view>真实姓名</view>
+	<input placeholder="请输入您的真实姓名" value="{{realName}}" bindinput="inputRealName"></input>
+</view>
+<view class='binding-item'>
+	<view>联系电话</view>
+	<input placeholder="请输入您的手机号码" value="{{mobile}}" bindinput="inputMobile"></input>
+</view>
+<view>
+	<view class="binding-btn" bindtap="bindingAdd">{{buttonText}}</view>
+</view>

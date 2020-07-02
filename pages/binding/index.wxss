@@ -1,0 +1,28 @@
+/* pages/binding/index.wxss */
+.binding-item {
+  margin: 40rpx;
+  padding-top: 20rpx;
+  padding-bottom: 40rpx;
+  display: flex;
+  font-size: 32rpx;
+  /* 在模拟器为iphone 6 时，1px=2rpx ，这里设置32rpx，即16px */
+  border-bottom: 1rpx solid #dedede;
+}
+
+.binding-item input {
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  height: 100%;
+  padding-left: 20rpx;
+}
+
+.binding-btn{
+  background-color:#19be6b;
+  padding: 26rpx;
+  margin: 40rpx;
+  color: white;
+  text-align: center;
+}
+
+
