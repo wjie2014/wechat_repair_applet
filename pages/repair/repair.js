@@ -17,7 +17,6 @@ Page({
     wx.request({
       url: app.serverUrl + 'api/v1/repair/list/' + that.data.page + "/" + that.data.pageSize,
       data: {
-        page: that.data.page,
         openid: app.globalData.openid
       },
       header: {
